@@ -1,0 +1,547 @@
+/*-----header----------------------------------------*/
+.header
+	background:
+		color: #000 
+		image: image-url("bg-header.jpg")
+	color: #fff
+	padding-top: 30px
+	padding-bottom: 10px
+	+cover
+	+r(w860)
+		padding-top: 17px
+		padding-bottom: 20px
+	+r(w700)
+		padding-top: 22px 	
+	.header-in
+		position: relative
+		+clr
+		+r(w700)
+			padding-left: 10px
+			padding-right: 10px
+	.header__top
+		+clr
+	.header__left
+		float: left
+		+clr
+		.item
+			@extend .stick
+			float: left
+			font-size: 12px
+			line-height: 19px
+			color: #fff
+			vertical-align: top
+			margin-right: 20px
+			.link
+				border-bottom: 1px dotted 
+				vertical-align: top
+				margin-right: 10px
+				font-family: "helvetica-light" 
+			&:hover
+				.link
+					border-bottom-color: transparent 
+				.ico
+					+opacity(0.7) 							
+			.ico
+				vertical-align: -6px
+			&:last-child
+				margin-right: 0	
+			+r(w700)
+				display: none	
+		.header__mobile
+			li
+				float: left
+				margin-right: 15px						
+	.header__right
+		float: right
+		text-align: right
+		+clr
+		.item
+			float: right
+			position: relative
+			&:first-child
+				margin-left: 0
+				margin-left: 25px
+			&:before
+				position: absolute
+				content: ""
+				height: 30px
+				width: 1px
+				display: inline-block
+				top: 2px
+				left: -11px
+				+background-image(linear-gradient(bottom, rgba(255,255,255,0) 0%, #fff 50.39%, rgba(255,255,255,.99) 50.9%, rgba(255,255,255,0) 100%))
+			&:last-child
+				&:before
+					display: none		
+			+r(w700)
+				display: none
+		.phone
+			font-size: 16px
+			color: #fff
+			font-family: heliosextc
+			font-size: 16px 
+		.quest
+			font-size: 11px
+			color: #fff
+			text-decoration: underline
+			&:hover
+				text-decoration: none	
+		.city
+			position: relative
+			.link					 			
+				font-size: 12px
+				color: #FFF
+				border-bottom: 1px dotted
+				margin-left: 10px
+				font-family: heliosextthinc 
+				font-size: 12px
+				&:hover
+					border-bottom-color: transparent
+			.ico:after
+				position: absolute
+				bottom: -11px
+				left: 6px
+				content: ""
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 4px 4px 0 4px
+				border-color: #fff transparent transparent transparent
+				+opacity(0.35)
+			&:hover
+				.ico
+					+opacity(0.7) 	
+		.shop
+			font-size: 11px
+			color: #FFF
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		.header__mobile
+			li
+				float: right
+				margin-left: 15px		
+	.header__bottom
+		+r(w700)
+			display: none
+	.social
+		float: left
+		margin-right: 20px
+		+r(w700)
+			display: none
+	.header__mobile
+		display: none
+		+clr
+		.ico
+			@extend .hover-opacity
+		.i-earth-big
+			position: relative
+		.i-earth-big:after
+			position: absolute
+			bottom: -8px
+			left: 10px
+			content: ""
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 5px 5px 0 5px
+			border-color: #fff transparent transparent transparent
+			+opacity(0.35)
+		+r(w700)
+			display: block
+/*-----about-----------------------------------------*/
+.about
+	position: relative
+	z-index: 1000
+/*-----footer-----------------------------------------*/
+.footer
+	.footer__top 
+		background-color: #313131
+		+r(w700)
+			padding-bottom: 45px
+	.footer__middle
+		padding-top: 20px
+		padding-bottom: 20px
+		background-color: #2b2b2b
+		overflow: hidden
+		+r(w700)
+			padding-top: 45px
+			padding-bottom: 40px
+	.footer__bottom
+		padding-top: 17px
+		padding-bottom: 25px
+		background-image: image-url("bg-footer.jpg") 	
+	.footer__headline
+		height: 107px
+		background-image: image-url("bg-other.jpg") 
+		position: relative
+		+r(w700)
+			height: 78px 	 		
+	.footer__string
+		height: $nav-bord-h+$nav-h
+		margin-bottom: 47px
+		position: relative
+		+clr
+	.line
+		.line__help
+			background-image: image-url("bg-nav-foot.png")				
+		.logo	
+			background-image: image-url('logo-foot.png') 
+			margin-top: -92px  
+			+r(w860)
+				background-image: image-url('logo-foot.png')
+				height: 163px 
+			+r(w700)
+				background-image: image-url('logo-mob-foot.png')
+				height: 132px
+				margin-top: -70px
+	.footer__way
+		border-bottom: 1px solid #898989
+		border-top: 1px solid #898989 
+		padding-top: 10px
+		padding-bottom: 6px 
+		+clr
+		+r(w700)
+			border: 1px solid #898989
+			max-width: 440px
+			height: 70px 
+			padding: 2px
+		+r(w480)
+			width: 90%	
+	.footer__way-link
+		float: left
+		line-height: 32px
+		width: 26%
+		font-family: heliosextc
+		font-size: 12px
+		color: #ACACAC
+		text-align: right
+		position: relative
+		cursor: default
+		text-transform: uppercase
+		+box
+		&:after
+			position: absolute
+			content: ""
+			top: 7px
+			right: -20px
+			display: inline-block
+			height: 20px
+			width: 1px
+			background-color: #acacac 
+		+r(w860)
+			width: 21% 
+		+r(w700)
+			width: 100%
+			cursor: pointer
+			text-align: center
+			border: 1px solid #464646 	
+			font-size: 20px
+			line-height: 62px
+			+transition
+			&:hover
+				color: #fff
+				&:after
+					@extend .hover-opacity 
+			&:after
+				top: 28px
+				right: 30px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 10px 10px 0 10px
+				border-color: $main-c transparent transparent transparent
+				background-color: transparent 
+	.footer__way-ico
+		float: right
+		width: 55%
+		display: table
+		border-collapse: collapse
+		margin-right: 135px
+		+box
+		+r(w860)
+			margin-right: 45px
+			width: 65%
+		+r(w700)
+			display: none	  
+		li
+			display: table-cell		
+		a
+			@extend .hover-opacity
+	.footer__info
+		display: none
+		text-align: center
+		padding-top: 38px
+		+r(w700)
+			display: block
+	.footer__info-phone
+		font-family: heliosextc
+		font-size: 28px
+		color: #999
+		margin-bottom: 5px
+		display: inline-block
+		+transition
+		&:hover
+			color: #FFF 
+	.footer__info-quest
+		display: table
+		border-collapse: collapse
+		width: 65%
+		margin: 0 auto 
+		+r(w480)
+			width: 100%
+		li
+			display: table-cell
+			text-align: center
+		a
+			text-decoration: underline
+			font-family: arial
+			color: #999
+			+transition
+			&:hover
+				text-decoration: none
+				color: #FFF 
+	.footer__title
+		text-align: center
+		font-family: heliosextthinc
+		font-size: 12px
+		color: #ACACAC
+		font-weight: normal
+		margin-top: 22px 
+		margin-bottom: 15px 
+		+r(w700)
+			font-size: 22px
+			margin-top: 42px
+	.footer__social
+		display: table
+		border-collapse: collapse
+		width: 260px
+		+r(w700)
+			width: 100%
+			.i-foot-vk
+				+s(i-foot-vk-big)
+				&:hover
+					+s(i-foot-vk-big-h)
+			.i-foot-twit
+				+s(i-foot-twit-big)
+				&:hover
+					+s(i-foot-twit-big-h)								
+			.i-foot-fb
+				+s(i-foot-fb-big)
+				&:hover
+					+s(i-foot-fb-big-h)								
+			.i-foot-yt
+				+s(i-foot-yt-big)
+				&:hover
+					+s(i-foot-yt-big-h)								
+			.i-foot-two
+				+s(i-foot-two-big)
+				&:hover
+					+s(i-foot-two-big-h)								
+			.i-foot-voice
+				+s(i-foot-voice-big)
+				&:hover
+					+s(i-foot-voice-big-h)
+		li
+			display: table-cell
+			text-align: center
+		.ico	
+			+transition(0s)	
+	.footer__about
+		font-family: helioslightc
+		font-size: 10px
+		line-height: 13px
+		color: #666  
+		text-align: center
+		border-bottom: 1px solid #5C5C5C 
+		padding-bottom: 20px
+		margin-bottom: 10px
+		+r(w700)
+			display: none
+	.footer__last
+		color: #FFF 
+		padding: 0 10px 
+		+clr
+		+r(w700)
+			margin-top: 7px
+	.footer__last-copy
+		float: left
+		font-size: 12px
+		color: #ACACAC 
+		+hl
+		+r(w480)
+			font-size: 9px
+	.footer__last-develop
+		float: right
+		font-family: heliosextthinc
+		font-size: 11px
+		color: #ACACAC
+		+r(w480)
+			font-size: 9px
+		a
+			color: #ACACAC
+			text-decoration: underline
+			+transition
+			&:hover 
+				text-decoration: none
+				color: #FFF 
+	.footer__last-copy,	.footer__last-develop
+		margin-top: -17px
+		+r(w700)
+			margin-top: 15px		
+	.footer__last-credit
+		margin-left: 55% 					
+		width: 225px
+		text-align: center
+		+r(w860)
+			margin-left: 45%
+		+r(w700)
+			margin: 0 auto 	
+		ul
+			display: table
+			border-collapse: collapse
+			width: 100%
+		li
+			display: table-cell
+		a
+			@extend .hover-opacity				
+/*-----vacncy-----------------------------------------*/
+.vacancy
+	background-image: image-url("vacancy-bg.png")
+	position: relative
+	padding-top: 65px
+	padding-bottom: 90px
+	&:after
+		position: absolute
+		content: ""
+		top: 3px
+		height: 2px
+		width: 100%
+		background-color: #fff 
+	.vacancy-in
+		+clr
+		+r(w480)
+			margin: 0 10px
+	.col
+		height: 210px
+		width: 49%
+		border: 1px solid #fff
+		position: relative
+		font-family: heliosextc
+		color: #333
+		font-size: 14px
+		+box
+		+r(w860)
+			height: 230px
+		+r(w700)
+			width: 100%
+			height: auto
+			margin-bottom: 10px	
+		&:after
+			position: absolute
+			content: ""
+			display: inline-block
+			background-color: $main-c
+			width: 5px
+			height: 42px
+			top: 80px
+			right: -3px
+			+r(w700)
+				height: 5px
+				left: 217px 	 
+				width: 42px 
+	.col-left
+		float: left
+		padding: 35px 20px 20px 20px
+		+r(w860)
+			padding-top: 25px
+		+r(w700)
+			font-size: 12px
+			text-align: center
+			padding-top: 10px
+			padding-bottom: 10px
+			&:after
+				top: 99%
+		a
+			font-weight: bold
+			color: #333
+			+transition
+			&:hover
+				text-decoration: underline
+				color: #000 	
+	.col-right
+		float: right
+		padding: 15px 10px 0px
+		text-align: center
+		+r(w700)
+			padding-bottom: 20px
+		+clr
+		&:after
+			left: -3px
+			+r(w700)
+				top: -3px	
+				left: 217px
+	.vacancy-title
+		text-align: center
+		font-weight: normal
+		font-family: heliosextthinc
+		font-size: 30px
+		color: #FFF 
+		text-transform: uppercase
+		margin-bottom: 30px
+		+r(w700)
+			margin-bottom: 15px
+	.vacancy-title-small
+		text-align: center
+		font-weight: normal
+		font-size: 14px
+		margin-bottom: 15px
+		padding-right: 30px
+		padding-left: 30px
+		+r(w700)
+			font-size: 12px
+			margin-bottom: 7px
+	.vacancy__job
+		list-style-image: url(../img/list.png)
+		padding-left: 50px
+		text-align: left
+		+r(w860)
+			margin-bottom: 20px
+			padding-left: 25px
+		+r(w700)
+			margin-bottom: 12px
+			padding-left: 75px	
+		a
+			text-decoration: underline
+			font-family: heliosextc
+			font-size: 12px
+			line-height: 10px
+			color: #333
+			vertical-align: sub
+			+transition
+			&:hover
+				text-decoration: none
+				color: #000   
+	.btn-job
+		text-transform: uppercase
+		text-align: center
+		background-color: #000
+		color: #FFF
+		padding: 0 23px
+		border-top: 6px solid $main-c
+		height: 40px
+		font-size: 12px
+		line-height: 28px
+		float: right
+		margin-right: 10px 
+		+transition
+		&:hover
+			background-color: lighten(#000, 10%)
+		+r(w860)
+			margin-right: 0
+			width: 100%
+			float: none	 
+		+r(w700)
+			border-top: 3px solid $main-c
+			height: 30px
+			width: auto 

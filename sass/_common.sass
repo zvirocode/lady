@@ -1,0 +1,26 @@
+$default-transition-duration: 0.3s
+$nav-bord-h: 12px
+$nav-h: 39px
+
+$main-c: #fc0
+a
+	text-decoration: none	
+body,a
+	font-family: arial 		 			
+.wrap
+	width: 100%
+	min-width: 320px
+	height: 100%
+	background-color: #222 
+.container
+	margin: 0 auto
+	padding: 0 20px 0 20px
+	max-width: 960px
+	+box 
+	// +r(w480)
+	// 	max-width: 480px
+	+r(w860)
+		max-width: 768px
+	+r(w700)
+		max-width: 480px			
+	

@@ -1,0 +1,382 @@
+.container
+	+r(w700)
+		padding: 0
+.title
+	height: 52px
+	padding-top: 65px
+	background: #FFF 
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: -52px
+		left: 0
+		background: url("../img/bg.jpg") 100px 0
+		width: 100%
+		height: 1218px
+		+cover
+	.title__meta
+		text-align: center
+		color: #f2f2f2
+		font-size: 24px
+		text-transform: uppercase
+		@include text-shadow(0 1px 1px rgba(0,0,0,.5))
+		+hl
+		position: relative
+		z-index: 100
+
+.slider
+	padding-bottom: 25px
+	background: url("../img/slider_bg.png") 0 0 repeat
+	color: #FFF
+	position: relative
+	z-index: 666
+	.slider__in
+	.slider__topper
+		margin-bottom: 20px
+		+r(w700)
+			margin-bottom: 10px
+	.slider__topper-nav
+		+clr
+		li
+			float: left
+			height: 34px
+			line-height: 34px
+			padding: 0 20px 
+			border-top: 6px solid transparent
+			background: transparent 
+			&.is-active
+				border-color: #ffcc00
+				background: rgba(#000, .78)
+				.slider__topper-title
+					color: #FFF
+					a
+						color: #FFF
+	.slider__topper-title
+		font-size: 18px
+		text-transform: uppercase
+		color: #000 
+		+hl
+		a
+			font-size: 18px
+			text-transform: uppercase
+			color: #000 
+			+hl
+			text-decoration: none
+	.slider__container
+		min-height: 240px
+		padding: 10px 0
+		background: #f5f5f5
+		color: #333333
+	.slider__cycle
+		position: relative
+	.slider__cycle-item
+		+clr
+	.slider__cycle-left
+		width: 138px
+		float: left
+		text-align: center
+		+r(w700)
+			width: 70px
+	.slider__cycle-media
+		width: 160px
+		padding: 0 20px
+		border-right: 2px solid #ffcc00
+		border-left: 2px solid #ffcc00
+		float: left
+		+r(w700)
+			width: 140px
+			padding: 0 8px 
+		img
+			display: block
+			max-width: 100%
+			margin: 10px 0
+	.slider__cycle-text
+		overflow: hidden
+		padding-top: 30px
+		padding-left: 20px
+		padding-right: 40px
+		font-size: 14px
+		font-family: "heliosextlightc", sans-serif 
+		+r(w700)
+			font-size: 12px
+		p
+			margin-bottom: 20px
+	.slider__cycle-date
+		padding-top: 10px
+	.slider__cycle-year
+		font-size: 32px
+		color: #333
+		font-family: "heliosextlightc", sans-serif
+		+r(w700)
+			font-size: 18px
+	.slider__cycle-note
+		font-size: 12px
+		color: #333
+		font-family: "heliosextlightc", sans-serif
+		+r(w700)
+			font-size: 12px
+	.slider__cycle-prev, .slider__cycle-next
+		display: inline-block
+		width: 100px
+		height: 50px
+		background: #FFF
+		cursor: pointer
+		position: absolute
+		left: 20px
+		z-index: 100
+		+r(w700)
+			width: 50px
+			left: 10px
+			&:before
+				left: 5px
+		&:before
+			content: ""
+			position: absolute
+			left: 10px
+	.slider__cycle-prev
+		background: url("../img/slider_bg.png") 0 0 repeat
+		bottom: 60px
+		&:before
+			top: 17px
+			left: 50%
+			margin-left: -21px
+			+s(i-top)
+		&:hover
+			background: url("../img/slider_bg_h.png") 0 0 repeat
+			&:before
+				+sp(i-top_h)
+	.slider__cycle-next
+		bottom: 10px
+		background: url("../img/slider_bg.png") 4px 2px repeat
+		&:before
+			top: 17px
+			left: 50%
+			margin-left: -21px
+			+s(i-down)
+		&:hover
+			background: url("../img/slider_bg_h.png") 4px 2px repeat
+			&:before
+				+sp(i-down_h)
+
+.tour
+	position: relative
+	&:before
+		content: ""
+		width: 100%
+		height: 4px
+		position: absolute
+		bottom: 0px
+		left: 0
+		right: 0
+		background: rgba(#000, 0.7)
+		z-index: 100
+	.tour__media
+		position: relative
+		.tour__media-in
+			width: 100%
+			height: 340px
+			background: url("../img/tour.jpg") 
+			+cover
+		.tour__media-text
+			width: 960px
+			height: 93px
+			background: url("../img/tour_text.png")
+			position: absolute
+			left: 50%
+			margin-left: -480px
+			bottom: 0
+			+r(w991)
+				width: 100%
+				left: 0
+				margin-left: 0
+				+cover
+	.tour__in
+		position: relative
+		top: 0
+		z-index: 100
+	.tour__play
+		width: 190px
+		height: 190px
+		background: url("../img/tour.png")
+		position: absolute
+		top: 30px
+		left: 50%
+		margin-left: -95px
+		+transition
+		&:hover
+			+opacity(0.93)
+			+transition
+	.tour__title
+		margin-bottom: 25px
+		padding-top: 65px
+		font-size: 14px
+		text-transform: uppercase
+		color: #FC0
+		font-family: "heliosextthinc", sans-serif
+		text-align: center
+		position: relative
+		&:after
+			content: ""
+			width: 120px
+			height: 1px
+			background: #FC0
+			position: absolute
+			bottom: -12px
+			left: 50%
+			margin-left: -60px
+	.tour__meta
+		font-size: 14px
+		text-transform: uppercase
+		font-family: "heliosextthinc", sans-serif
+		color: #666
+		text-align: center
+		&:after
+			content: ""
+			margin-left: 7px
+			margin-bottom: 2px
+			display: inline-block
+			vertical-align: middle
+			+s(i-play)
+
+.forus
+	padding-top: 53px
+	min-height: 200px
+	position: relative
+	overflow: hidden
+	.forus__bg
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url("../img/bg.jpg") 0px 0
+		width: 100%
+		+cover
+		background-position: 50% 80%
+	&:after
+		content: ""
+		min-height: 200px
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url("../img/bg_dark2.png") 0 0 repeat
+		+opacity(0.43)
+	.forus__in
+		min-height: 200px
+		position: relative
+		z-index: 1666
+		+r(w767)
+			padding: 0
+	.forus__row
+		padding: 0 60px
+		margin-top: 25px
+		+clr
+	.forus__descr
+		width: 50%
+		margin-right: 5%
+		float: left
+		font-size: 14px
+		color: #FFF
+		font-family: "helioslightc", sans-serif
+		// +r(w767)
+		// 	width: 40%
+		p
+			margin-bottom: 20px
+	.forus__media
+		width: 45%
+		overflow: hidden
+		// +r(w767)
+		img
+			max-width: 100%
+	.forus__slider	
+	position: relative
+	.forus__caro
+		position: relative
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			width: 10000px
+			height: 57px
+		&:before
+			background: rgba(#000, .6)
+			right: 100% 
+		&:after
+			background: rgba(#000, .1)
+			left: 100%
+		.slides
+			width: 100% !important
+			height: 57px
+		li
+			width: 25% !important
+			height: 57px
+			line-height: 57px
+			text-align: center
+			cursor: pointer
+			&:hover
+				background: url("../img/bg_dark3.png") 0px 0px repeat !important
+			&.first
+				background: rgba(#000, .6)
+			&.second
+				background: rgba(#000, .4)
+			&.third
+				background: rgba(#000, .2)
+			&.fourth
+				background: rgba(#000, .1)
+		.forus__title
+			font-size: 18px
+			text-transform: uppercase
+			color: #FFF
+			+hl
+			+r(w767)
+				font-size: 12px
+	.forus__prev, .forus__next
+		position: absolute
+		top: 50%
+		margin-top: -35px
+		cursor: pointer
+	.forus__prev
+		+s(i-prev)
+		left: 20px
+		z-index: 2666
+	.forus__next
+		+s(i-next)
+		right: 20px
+		z-index: 2666
+.label
+	display: inline-block
+	height: 34px
+	line-height: 34px
+	padding: 0 20px 
+	border-top: 6px solid #ffcc00
+	background: rgba(#000, .78)
+	font-size: 18px
+	color: #FFF
+	text-transform: uppercase
+	font-family: "heliosextlightc", sans-serif
+
+.photo-descr
+	display: block
+	+r(w767)
+		display: none
+.photo-tablet
+	display: none
+	+r(w767)
+		display: block
+	+r(w480)
+		display: none
+.photo-mobile
+	display: none
+	+r(w480)
+		display: block
+
+.container
+	+r(w700)
+		max-width: 100%
+
+
+
+
