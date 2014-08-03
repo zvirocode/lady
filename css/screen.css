@@ -391,6 +391,7 @@ body, a { font-family: arial; }
 .title .title__meta { text-align: center; color: #f2f2f2; font-size: 24px; text-transform: uppercase; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); font-family: "Helvetica-Light", arial, sans-serif; position: relative; z-index: 100; }
 
 .slider { padding-bottom: 25px; background: url("../img/slider_bg.png") 0 0 repeat; color: white; position: relative; z-index: 666; }
+@media only screen and (max-width: 767px) { .slider { padding-bottom: 0; } }
 .slider .slider__topper { margin-bottom: 20px; }
 @media only screen and (max-width: 700px) { .slider .slider__topper { margin-bottom: 10px; } }
 .slider .slider__topper-nav { *zoom: 1; }
