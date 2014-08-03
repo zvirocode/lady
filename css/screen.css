@@ -160,10 +160,11 @@ body, a { font-family: arial; }
 @media only screen and (max-width: 700px) { .footer .footer__headline { height: 78px; } }
 .footer .footer__string { height: 51px; margin-bottom: 47px; position: relative; *zoom: 1; }
 .footer .footer__string:after { content: " "; display: table; clear: both; }
-.footer .line .line__help { background-image: url('../img/bg-nav-foot.png?1407081364'); }
 .footer .line .logo { background-image: url('../img/logo-foot.png?1407081364'); margin-top: -92px; }
+.footer .line .logo:before, .footer .line .logo:after { top: 92px; background: url("../img/bg-nav-foot.png"); }
 @media only screen and (max-width: 860px) { .footer .line .logo { background-image: url('../img/logo-foot.png?1407081364'); height: 163px; } }
-@media only screen and (max-width: 700px) { .footer .line .logo { background-image: url('../img/logo-mob-foot.png?1407081364'); height: 132px; margin-top: -70px; } }
+@media only screen and (max-width: 700px) { .footer .line .logo { background-image: url('../img/logo-mob-foot.png?1407081364'); height: 132px; margin-top: -70px; }
+  .footer .line .logo:before, .footer .line .logo:after { top: 70px; } }
 .footer .footer__way { border-bottom: 1px solid #898989; border-top: 1px solid #898989; padding-top: 10px; padding-bottom: 6px; *zoom: 1; }
 .footer .footer__way:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 700px) { .footer .footer__way { border: 1px solid #898989; max-width: 440px; height: 70px; padding: 2px; } }

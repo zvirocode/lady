@@ -182,12 +182,14 @@
 		margin-bottom: 47px
 		position: relative
 		+clr
-	.line
-		.line__help
-			background-image: image-url("bg-nav-foot.png")				
+	.line		
 		.logo	
 			background-image: image-url('logo-foot.png') 
-			margin-top: -92px  
+			margin-top: -92px
+			&:before, &:after
+				top: 92px
+				background: url("../img/bg-nav-foot.png") 
+			&:after
 			+r(w860)
 				background-image: image-url('logo-foot.png')
 				height: 163px 
@@ -195,6 +197,8 @@
 				background-image: image-url('logo-mob-foot.png')
 				height: 132px
 				margin-top: -70px
+				&:before, &:after
+					top: 70px
 	.footer__way
 		border-bottom: 1px solid #898989
 		border-top: 1px solid #898989 
