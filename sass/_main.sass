@@ -304,29 +304,38 @@
 	left: 0
 	top: 0
 	width: 100%
-	ul
-		height: 52px
-		display: table
-		width: 100%
-		border-collapse: collapse		
-	li
-		display: table-cell
-	.line__help
-		height: 62px
-		background:
-			image: image-url("bg-nav.png")
-			repeat: repeat-x
-		+r(w700)
-			background-image: image-url("bg-nav-mob.png")
-	.logo-out
-		width: 183px
 	.logo
+		position: absolute
+		top: 0
 		margin-top: -85px
-		+hide-text	
+		left: 50%
+		margin-left: -92px
+		+hide-text
+		&:before
+			content: ""
+			width: 10000px
+			height: 52px
+			background: url("../img/header-nav.png") 
+			position: absolute
+			top: 85px
+			right: 100%
+		&:after
+			content: ""
+			width: 10000px
+			height: 52px
+			background: url("../img/header-nav.png") 
+			position: absolute
+			top: 85px
+			left: 100%
 		+r(w860)
 			margin-top: -58px
+			&:before, &:after
+				top: 58px
 		+r(w700)
-			margin-top: -70px 	 		
+			margin-top: -70px
+			&:before, &:after
+				background: url("../img/header-nav_mobile.png")
+				top: 70px	 		
 /*-----social--------------------------------------*/
 .social
 	+clr
