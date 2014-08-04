@@ -78,12 +78,13 @@
 		.phone
 			font-size: 16px
 			color: #fff
-			font-family: heliosextc
+			+he
 			font-size: 16px 
 		.quest
 			font-size: 11px
 			color: #fff
 			text-decoration: underline
+			+an
 			&:hover
 				text-decoration: none	
 		.city
@@ -115,6 +116,7 @@
 			font-size: 11px
 			color: #FFF
 			text-decoration: underline
+			+an
 			&:hover
 				text-decoration: none
 		.header__mobile
@@ -152,7 +154,7 @@
 /*-----about-----------------------------------------*/
 .about
 	position: relative
-	z-index: 1000
+	z-index: 8000
 /*-----footer-----------------------------------------*/
 .footer
 	.footer__top 
@@ -415,13 +417,13 @@
 	position: relative
 	padding-top: 65px
 	padding-bottom: 90px
-	&:after
-		position: absolute
-		content: ""
-		top: 3px
-		height: 2px
-		width: 100%
-		background-color: #fff 
+	// &:after
+	// 	position: absolute
+	// 	content: ""
+	// 	top: 3px
+	// 	height: 2px
+	// 	width: 100%
+	// 	background-color: #fff 
 	.vacancy-in
 		+clr
 		+r(w480)
@@ -452,7 +454,8 @@
 			right: -3px
 			+r(w700)
 				height: 5px
-				left: 217px 	 
+				left: 50%
+				margin-left: -21px 
 				width: 42px 
 	.col-left
 		float: left
@@ -484,7 +487,8 @@
 			left: -3px
 			+r(w700)
 				top: -3px	
-				left: 217px
+				left: 50%
+				margin-left: -21px
 	.vacancy-title
 		text-align: center
 		font-weight: normal
@@ -496,12 +500,16 @@
 		+r(w700)
 			margin-bottom: 15px
 	.vacancy-title-small
-		text-align: center
+		text-align: left
 		font-weight: normal
 		font-size: 14px
 		margin-bottom: 15px
-		padding-right: 30px
-		padding-left: 30px
+		padding-right: 5px
+		padding-left: 20px
+		+r(w960)
+			padding-left: 30px
+			padding-right: 30px
+			text-align: center
 		+r(w700)
 			font-size: 12px
 			margin-bottom: 7px
