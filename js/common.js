@@ -21,7 +21,11 @@ $(document).ready(function() {
 		return false;
 	});
 
+
 	$('.js-flexslider').flexslider({
+		start: function(){
+			$(".slider").fadeTo( "slow" ,1, function() {});
+		},
 		namespace: "slider__",
 		smoothHeight: true,
 		animation: "fade",
@@ -65,6 +69,9 @@ $(document).ready(function() {
 
 $(window).load(function() {
   $('.js-slider-caro').flexslider({
+  	start: function(){
+  		$(".forus").fadeTo( "slow" ,1, function() {});
+  	},
     smoothHeight: true,
     animation: "slide",
     controlNav: false,
@@ -76,6 +83,9 @@ $(window).load(function() {
   });
    
   $('.js-slider').flexslider({
+  	start: function(){
+  		$(".forus").fadeTo( "slow" ,1, function() {});
+  	},
   	smoothHeight: true,
     animation: "slide",
     controlNav: false,
