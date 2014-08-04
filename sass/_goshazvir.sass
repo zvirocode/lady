@@ -28,6 +28,7 @@
 		z-index: 100
 
 .slider
+	+opacity(0)
 	padding-bottom: 25px
 	background: url("../img/slider_bg.png") 0 0 repeat
 	color: #FFF
@@ -259,6 +260,7 @@
 			+s(i-play)
 
 .forus
+	+opacity(0)
 	padding-top: 53px
 	min-height: 200px
 	position: relative
@@ -491,7 +493,9 @@
 	left: 0
 	right: 0
 	z-index: -1
-	// background: red
 	&.is-active
-		z-index: 7000
+		z-index: 6000 
+
+.fancybox-skin
+	+box-shadow(0 0 10px rgba(#000, .6))
 
