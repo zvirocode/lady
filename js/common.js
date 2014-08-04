@@ -1,7 +1,13 @@
 $(document).ready(function() {
 
+	$(".nav-overlay").click(function() {
+		$('.navigation-hidden').removeClass('is-open');
+		$('.nav-overlay').removeClass('is-active');
+	});
+
 	$('.navigation__point').click(function(){
-		$('.navigation-hidden').toggleClass('is-open');
+		$('.navigation-hidden').addClass('is-open');
+		$('.nav-overlay').addClass('is-active');
 		return false;
 	});
 
@@ -45,6 +51,15 @@ $(document).ready(function() {
 	    $('.js-slider').flexslider('next')
 	    return false;
 	})
+
+	$('.fancybox').fancybox({
+	  // padding: 0,
+	  helpers: {
+	    overlay: {
+	      locked: false
+	    }
+	  }
+	});
 
 });
 

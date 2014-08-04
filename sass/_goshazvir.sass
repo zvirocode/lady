@@ -15,7 +15,7 @@
 		left: 0
 		background: url("../img/bg.jpg") 100px 0
 		width: 100%
-		height: 1218px
+		height: 1000px
 		+cover
 	.title__meta
 		text-align: center
@@ -93,6 +93,7 @@
 			padding: 0 8px 
 		+r(w480)
 			width: 90px
+			margin-right: 10px
 		img
 			display: block
 			max-width: 100%
@@ -106,6 +107,12 @@
 		font-family: "heliosextlightc", sans-serif 
 		+r(w700)
 			font-size: 12px
+		+r(w480)
+			float: none
+			width: auto
+			overflow: visible
+			padding-left: 69px
+			padding-top: 10px
 		p
 			margin-bottom: 20px
 	.slider__cycle-date
@@ -206,10 +213,16 @@
 		height: 190px
 		background: url("../img/tour.png")
 		position: absolute
-		top: 30px
-		left: 50%
-		margin-left: -95px
+		top: -50px
+		// left: 50%
+		// margin-left: -95px
+		right: 195px
+		z-index: 1000
 		+transition
+		+r(w960)
+			top: 30px
+			left: 50%
+			margin-left: -95px
 		&:hover
 			+opacity(0.93)
 			+transition
@@ -281,7 +294,7 @@
 	.forus__row
 		padding: 0 60px
 		margin-top: 25px
-		+clr
+		// +clr
 	.forus__descr
 		width: 50%
 		margin-right: 5%
@@ -289,20 +302,25 @@
 		font-size: 14px
 		color: #FFF
 		font-family: "helioslightc", sans-serif
-		// +r(w767)
-		// 	width: 40%
+		+r(w767)
+			width: auto
+			float: none
 		p
 			margin-bottom: 20px
 	.forus__media
 		width: 45%
-		overflow: hidden
-		// +r(w767)
+		float: right
+		+r(w767)
+			float: right
+			margin-left: 20px
 		img
 			max-width: 100%
 	.forus__slider	
 	position: relative
 	.forus__caro
 		position: relative
+		+r(w767)
+			display: none
 		&:before, &:after
 			content: ""
 			position: absolute
@@ -366,7 +384,7 @@
 	font-size: 18px
 	color: #FFF
 	text-transform: uppercase
-	font-family: "heliosextlightc", sans-serif
+	+hl
 
 .photo-descr
 	display: block
@@ -387,6 +405,93 @@
 	+r(w700)
 		max-width: 100%
 
+.gallery
+	padding: 52px 0 35px
+	background: #FFF
+	position: relative
+	&:after
+		content: ""
+		width: 100%
+		height: 76px
+		position: absolute
+		top: 0px
+		left: 0
+		right: 0
+		background-image: url("../img/shadow.jpg") 
+	+r(767)
+		padding: 52px 20px 30px
+	+r(w480)
+		padding: 30px 0px 20px
+		&:after
+			height: 30px
+			+g(#cfcece, #e5e4e4)
 
+	.gallery__in
+		width: 852px
+		border: 1px solid #c2c2c2
+		border-bottom-width: 0 
+		padding: 25px 0 0
+		position: relative
+		z-index: 100
+	.galler__content
+		margin-bottom: 30px
+		padding: 0 20px
+		font-size: 14px
+		color: #333
+		font-family: "heliosextlightc", sans-serif
+		text-align: center
+		+r(w480)
+			margin-bottom: 15px
+			font-size: 12px
+		p
+			margin-bottom: 20px
+	.galler__top
+		margin-bottom: 55px
+		font-size: 18px
+		text-transform: uppercase
+		color: #333 
+		text-align: center
+		.galler__top-title
+			display: inline-block
+			position: relative
+			&:after
+				content: ""
+				width: 100%
+				height: 1px
+				background: #ffcc00 
+				position: absolute
+				left: 0
+				bottom: -25px
+	.gallery__caro
+		width: 100%
+		overflow: hidden
+		+clr
+	.gallery__media
+		float: left
+		width: 20%
+		+r(w480)
+			width: 33.3%
+		&.is-mobile-hidden
+			+r(w480)
+				display: none
+		&:hover
+			img
+				+transform(scale(1.05))
+				+transition
+		img
+			display: block
+			max-width: 100%
+			+transition
+		a
 
+.nav-overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: -1
+	// background: red
+	&.is-active
+		z-index: 7000
 
