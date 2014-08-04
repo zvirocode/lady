@@ -60,7 +60,9 @@ $(document).ready(function() {
 	  // padding: 0,
 	  helpers: {
 	    overlay: {
-	      locked: false
+	      locked: false,
+	      overlayShow: false,
+	      overlayOpacity: 0
 	    }
 	  }
 	});
