@@ -837,4 +837,152 @@
 	+he
 .fancybox-opened
 	margin-left: -10px !important
+	
+/*-----map------------------------------------*/
+.map
+	.map__topper
+		background-image: image-url("bg-map__topper.png")
+		text-align: center
+		@include box-shadow(0 1px 1px rgba(0,0,0,.5))
+	.map__title
+		padding: 0 25px 
+	.map__content-out
+		padding-left: 4%	
+		background-color: #333 
+	.map__content	
+		position: relative
+		height: 540px
+		text-align: left
+		+clr
+	.map__text, .map__city, .map__chart	
+		float: left
+		height: 100% 
+		+box
+	.map__text
+		width: 24%
+		padding: 0 30px 0 10px
+		.roll 
+			padding-top: 25px
+			padding-bottom: 30px
+			border-bottom: 1px solid #D6D6D6 
+			&:last-child
+				border-bottom: none 
+		.text
+			font-size: 14px
+			line-height: 17px	
+			color: #FFF 
+			+hl
+		.text-normal
+			font-size: 18px
+			line-height: 10px
+			padding-bottom: 15px
+			font-family: heliosextc 
+		.text-big
+			font-family: heliosextthinc
+			font-size: 38px 
+			padding-top: 11px
+			color: $main-c
+		.text-color
+			color: $main-c
+		.form	 
+			width: 100%
+			background-color: #FFF
+			border: none
+			height: 30px
+			line-height: 30px
+			margin-top: 10px 
+			input
+				color: #333
+			.btn-search
+				+s(i-search-map)
+	.map__city
+		width: 16%
+		background-color: #424242
+		padding: 25px 25px 0 25px 
+		a
+			color: #fff 
+			font-size: 14px
+			line-height: 18px
+			text-decoration: underline 
+			+hl
+			+transition
+			&:hover
+				color: $main-c 
+	.map__chart
+		width: 60%
+		overflow: hidden
+		border-bottom: 6px solid #525252 
+		img
+			height: 100%
+	.map__slider
+		height: 540px
+		position: absolute
+		top: 0
+		right: 0
+		width: 34%
+		height: 100%
+		background-color: rgba(0,0,0,0.7) 
+		padding: 15px 40px 0	
+		+box
+	.map__info
+		font-family: heliosextthinc
+		font-size: 14px
+		line-height: 20px
+		color: #FFF 
+		position: relative
+		padding: 20px 0 25px 
+		&:after
+			position: absolute
+			content: ""
+			left: 0
+			bottom: 0 
+			display: inline-block
+			background-color: $main-c
+			height: 1px
+			width: 100px 
+	.map__nav
+		border: 1px solid rgba(0,0,0,0.5)
+		padding: 2px
+		display: inline-block 
+		margin-top: 70px
+		margin-bottom: 10px
+		+clr 
+	.map__nav-left, .map__nav-right
+		display: block
+		float: left
+		width: 52px
+		height: 70px
+		background-color: rgba(0,0,0,0.5)
+		position: relative
+		+transition(color 0.3s)
+		&:hover
+			background-color: rgba(0,0,0,0.8)
+		&:after
+			position: absolute
+			content: ""
+			top: 14px
+			left: 14px	
+	.map__nav-left
+		&:after
+			+s(i-map-prev)
+		&:hover
+			&:after
+				+s(i-map-prev-h)			
+	.map__nav-right
+		&:after
+			+s(i-map-next)
+		&:hover
+			&:after
+				+s(i-map-next-h)	
+	.map__link
+		text-decoration: underline
+		font-family: arial
+		font-size: 12px
+		line-height: 20px
+		color: #999
+		display: block
+		+transition
+		&:hover
+			text-decoration: none
+			color: lighten(#999, 20%)
 
