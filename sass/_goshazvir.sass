@@ -34,6 +34,8 @@
 	color: #FFF
 	position: relative
 	z-index: 666
+	&.is-active
+		+opacity(1)
 	+r(w767)
 		padding-bottom: 0
 	.slider__in
@@ -347,18 +349,40 @@
 			&:hover
 				background: url("../img/bg_dark3.png") 0px 0px repeat !important
 			&.first
+				background: #2E2E2E 
 				background: rgba(#000, .6)
 			&.second
+				background: #3D3D3D 
 				background: rgba(#000, .4)
 			&.third
+				background: #595858 
 				background: rgba(#000, .2)
 			&.fourth
+				background: #42454b 
 				background: rgba(#000, .1)
 		.forus__title
 			font-size: 18px
 			text-transform: uppercase
 			color: #FFF
 			+hl
+			position: relative
+			&:hover
+				&:after
+
+					height: 8px
+					top: -4px
+					+transition
+			&:after
+				content: ""
+
+				width: 62px
+				height: 0
+				position: absolute
+				top: -10px
+				left: 50%
+				margin-left: -31px
+				background: #ffcc00
+				+transition
 			+r(w767)
 				font-size: 12px
 			+r(w360)
@@ -382,6 +406,7 @@
 	line-height: 34px
 	padding: 0 20px 
 	border-top: 6px solid #ffcc00
+	background: #000
 	background: rgba(#000, .78)
 	font-size: 18px
 	color: #FFF
@@ -408,7 +433,7 @@
 		max-width: 100%
 
 .gallery
-	padding: 52px 0 35px
+	padding: 52px 0 115px
 	background: #FFF
 	position: relative
 	&:after
@@ -420,10 +445,10 @@
 		left: 0
 		right: 0
 		background-image: url("../img/shadow.jpg") 
-	+r(767)
-		padding: 52px 20px 30px
+	+r(w960)
+		padding: 52px 20px 180px
 	+r(w480)
-		padding: 30px 0px 20px
+		padding: 30px 0px 180px
 		&:after
 			height: 30px
 			+g(#cfcece, #e5e4e4)
@@ -486,6 +511,242 @@
 			+transition
 		a
 
+.team
+	width: 100%
+	min-height: 260px 
+	padding: 30px 0 20px
+	background: url("../img/team_bgt.jpg") 0 0 repeat
+	.team__in
+		position: relative
+	.team__meta
+		position: relative
+		top: -30px
+		+r(w960)
+			width: 300px
+			position: absolute
+			top: -175px
+			left: 50%
+			margin-left: -150px
+			text-align: center
+	.team__container
+		+clr
+	.team__wrap-media
+		width: 830px
+		float: left
+		+r(w1180)
+			width: auto
+			min-height: 305px
+			float: none
+		+r(w767)
+			min-height: 190px
+		&:before
+			content: ""
+			width: 797px
+			height: 412px
+			position: absolute
+			bottom: -42px
+			left: 115px
+			background: url("../img/team-bg.png")
+			+r(w1180)
+				left: 50%
+				margin-left: -360px
+				bottom: auto
+				top: -108px
+			+r(w767)
+				width: 480px
+				height: 262px
+				background: url("../img/team-bg_mobile.png") 0 0 no-repeat
+				left: 50%
+				margin-left: -245px
+
+	.team__descr
+		width: 282px
+		float: left
+		text-align: center
+		+r(w1180)
+			width: auto
+			float: none
+			+clr
+	.team__media
+		min-height: 20px
+	.team__name-spesial1
+		width: 137px
+		height: 49px
+		line-height: 49px
+		background: url("../img/name1.png") 
+		font-size: 14px
+		color: #000000
+		+hl
+		position: absolute
+		top: -125px
+		left: 100px
+		+r(w1180)
+			left: 12%
+		+r(w960)
+			top: -140px
+			left: 5%
+		+r(w860)
+			left: 2%
+		+r(w767)
+			left: 1%
+		+r(w560)
+			left: -4%
+			font-size: 12px
+		+r(w400)
+			display: none
+		span
+			margin-left: 30px
+	.team__name-spesial2
+		width: 170px
+		height: 55px
+		line-height: 46px
+		text-align: right
+		background: url("../img/name2.png") 
+		font-size: 14px
+		color: #000000
+		+hl
+		position: absolute
+		right: 320px
+		top: -125px
+		+r(w1180)
+			right: 14%
+		+r(w960)
+			right: 6%
+		+r(w860)
+			right: 2%
+		+r(w767)
+			top: -140px
+			right: 1%
+		+r(w560)
+			right: -6%
+			font-size: 12px
+		+r(w400)
+			display: none
+		span
+			margin-right: 31px
+	.team__name
+		display: inline-block
+		padding: 0 11px
+		border-top: 1px solid #ffcc00
+		height: 23px
+		line-height: 23px
+		background: #000
+		+transition
+		z-index: 666 
+		color: #FFF
+		cursor: pointer
+		&:hover
+			background: #FC0
+			+transition
+			color: #000 
+		+r(w1180)
+			padding: 0 5px
+	.team__name1
+		position: absolute
+		left: 213px
+		bottom: 68px
+		+r(w1180)
+			left: 25%
+			top: 170px
+			bottom: auto
+		+r(w960)
+			left: 20%
+		+r(w767)
+			top: 65px
+		+r(w480)
+			left: 6%
+		+r(w400)
+			left: -1%
+	.team__name2
+		position: absolute
+		left: 335px
+		bottom: 50px
+		+r(w1180)
+			left: 36%
+			top: 190px
+			bottom: auto
+		+r(w960)
+			left: 33%
+		+r(w767)
+			top: 85px
+		+r(w480)
+			left: 9%
+	.team__name3
+		position: absolute
+		left: 483px
+		bottom: 110px
+		+r(w1180)
+			left: 50%
+			top: 145px
+			bottom: auto
+		+r(w767)
+			top: 55px
+	.team__name4
+		position: absolute
+		left: 590px
+		bottom: 33px
+		+r(w1180)
+			left: 60%
+			top: 175px
+			bottom: auto
+		+r(w960)
+			left: 65%
+		+r(w767)
+			top: 65px
+	.team__name5
+		position: absolute
+		left: 705px
+		bottom: -15px
+		+r(w1180)
+			left: 73%
+			top: 255px
+			bottom: auto
+		+r(w960)
+			left: 77%
+		+r(w767)
+			left: 73%
+			top: 105px
+	.team__title
+		margin-bottom: 45px
+		font-size: 36px
+		color: #ffcc00
+		+hl
+		+r(w1180)
+			width: 270px
+			margin-top: 13px
+			float: left
+		+r(w767)
+			margin-top: 30px
+	.team__title-in
+		position: relative
+		&:before
+			content: ""
+			width: 52px
+			height: 1px
+			background: #878787 
+			position: absolute
+			bottom: -20px
+			left: 50%
+			margin-left: -26px
+			+r(w1180)
+				content: none
+	.team__content
+		font-size: 14px
+		color: #000
+		+hl
+		position: relative
+		+r(w1180)
+			overflow: hidden
+			padding-left: 20px
+			padding-top: 15px
+			&:before
+				content: ""
+				width: 1px
+				background: #e1e1e1 
+				position: absolute
+				left: 0px
+				top: -20px
+				bottom: 0
 .nav-overlay
 	position: fixed
 	top: 0
@@ -496,6 +757,78 @@
 	&.is-active
 		z-index: 6000 
 
+.ui-tooltip
+	display: none
+	width: 200px
+	padding: 10px 15px
+	background: url("../img/tooltip_bg.jpg") 0 0 repeat
+	position: absolute
+	z-index: 2000
+	font-size: 12px
+	color: #333
+	font-family: Arial, sans-serif  
+	&:before
+		content: ""
+		+s(tooltip_arr)
+		position: absolute
+		bottom: -14px
+		left: 9px
+	&.tooltip_1
+		bottom: 108px
+		left: 250px
+		+r(w1180)
+			top: 29px
+			bottom: auto
+			left: 27%
+		+r(w960)
+			left: 21%
+	&.tooltip_2
+		bottom: 88px
+		left: 402px
+		+r(w1180)
+			top: 51px
+			bottom: auto
+			left: 38%
+		+r(w960)
+			left: 35%
+	&.tooltip_3
+		bottom: 150px
+		left: 512px
+		+r(w1180)
+			top: 5px
+			bottom: auto
+			left: 50%
+	&.tooltip_4
+		left: 624px
+		bottom: 71px
+		+r(w1180)
+			top: 5px
+			bottom: auto
+			left: 62%
+		+r(w960)
+			left: 65%
+	&.tooltip_5
+		left: 763px
+		bottom: 24px
+		+r(w1180)
+			// top: 29px
+			bottom: auto
+			left: 75%
+		+r(w960)
+			left: 58%
+
+.tooltip__close
+	+s(tooltip_cross)
+	position: absolute
+	right: 5px
+	top: 5px
+	cursor: pointer
+
 .fancybox-skin
 	+box-shadow(0 0 10px rgba(#000, .6))
+	background: rgba(#f9f9f9, .95)
+.fancybox-title-float-wrap .child
+	+he
+.fancybox-opened
+	margin-left: -10px !important
 
