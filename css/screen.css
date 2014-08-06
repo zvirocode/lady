@@ -569,7 +569,7 @@ body, a { font-family: arial; }
 @media only screen and (max-width: 1180px) { .team .team__name2 { left: 36%; top: 190px; bottom: auto; } }
 @media only screen and (max-width: 960px) { .team .team__name2 { left: 33%; } }
 @media only screen and (max-width: 767px) { .team .team__name2 { top: 85px; } }
-@media only screen and (max-width: 480px) { .team .team__name2 { left: 9%; } }
+@media only screen and (max-width: 480px) { .team .team__name2 { left: 23%; } }
 .team .team__name3 { position: absolute; left: 483px; bottom: 110px; }
 @media only screen and (max-width: 1180px) { .team .team__name3 { left: 50%; top: 145px; bottom: auto; } }
 @media only screen and (max-width: 767px) { .team .team__name3 { top: 55px; } }
@@ -584,11 +584,13 @@ body, a { font-family: arial; }
 .team .team__title { margin-bottom: 45px; font-size: 36px; color: #ffcc00; font-family: "Helvetica_Light-Normal"; font-weight: normal; font-style: normal; }
 @media only screen and (max-width: 1180px) { .team .team__title { width: 270px; margin-top: 13px; float: left; } }
 @media only screen and (max-width: 767px) { .team .team__title { margin-top: 30px; } }
+@media only screen and (max-width: 480px) { .team .team__title { width: 100%; float: none; text-align: center; } }
 .team .team__title-in { position: relative; }
 .team .team__title-in:before { content: ""; width: 52px; height: 1px; background: #878787; position: absolute; bottom: -20px; left: 50%; margin-left: -26px; }
 @media only screen and (max-width: 1180px) { .team .team__title-in:before { content: none; } }
 .team .team__content { font-size: 14px; color: black; font-family: "Helvetica_Light-Normal"; font-weight: normal; font-style: normal; position: relative; }
-@media only screen and (max-width: 1180px) { .team .team__content { overflow: hidden; padding-left: 20px; padding-top: 15px; }
+@media only screen and (max-width: 1180px) { .team .team__content { overflow: hidden; padding-left: 20px; padding-top: 15px; } }
+@media only screen and (max-width: 480px) { .team .team__content { padding: 0 10px; }
   .team .team__content:before { content: ""; width: 1px; background: #e1e1e1; position: absolute; left: 0px; top: -20px; bottom: 0; } }
 
 .nav-overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; }
