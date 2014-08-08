@@ -36,6 +36,67 @@ $(document).ready(function() {
 		slideshow: false
 	});
 
+	$('.js-mapslider').flexslider({
+		namespace: "slider__",
+		smoothHeight: true,
+		animation: "fade",
+		selector: ".slides > ul",
+		directionNav: false,
+		useCSS: false,
+		controlNav: false,
+		slideshow: false
+	});
+	$('.js-mapslider2').flexslider({
+		namespace: "slider__",
+		smoothHeight: true,
+		animation: "fade",
+		selector: ".slides > ul",
+		directionNav: false,
+		useCSS: false,
+		controlNav: false,
+		slideshow: false
+	});
+	$('.js-mapslider3').flexslider({
+		namespace: "slider__",
+		smoothHeight: true,
+		animation: "fade",
+		selector: ".slides > ul",
+		directionNav: false,
+		useCSS: false,
+		controlNav: false,
+		slideshow: false
+	});
+
+	$('.js-map-prev').on('click', function(){
+	    $('.js-mapslider').flexslider('prev')
+	    return false;
+	})
+
+	$('.js-map-next').on('click', function(){
+	    $('.js-mapslider').flexslider('next')
+	    return false;
+	})
+
+	$('.js-map-prev').on('click', function(){
+	    $('.js-mapslider2').flexslider('prev')
+	    return false;
+	})
+
+	$('.js-map-next').on('click', function(){
+	    $('.js-mapslider2').flexslider('next')
+	    return false;
+	})
+
+	$('.js-map-prev').on('click', function(){
+	    $('.js-mapslider3').flexslider('prev')
+	    return false;
+	})
+
+	$('.js-map-next').on('click', function(){
+	    $('.js-mapslider3').flexslider('next')
+	    return false;
+	})
+
 	$('.slider__cycle-prev').on('click', function(){
 	    $('.js-flexslider').flexslider('prev')
 	    return false;
@@ -240,6 +301,24 @@ $(document).ready(function() {
         }
       }
     });
+	});
+
+	// $(".js-addr").hide();
+	$(".js-addr1").css("display", "block");
+
+	$('.js-city1').on('click', function() {
+		$(".js-addr").hide();
+		$(".js-addr1").show();
+	});
+
+	$('.js-city2').on('click', function() {
+		$(".js-addr").hide();
+		$(".js-addr2").show();
+	});
+
+	$('.js-city3').on('click', function() {
+		$(".js-addr").hide();
+		$(".js-addr3").show();
 	});
 });
 

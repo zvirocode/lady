@@ -23,106 +23,118 @@
 	.header__left
 		float: left
 		+clr
-		.item
-			@extend .stick
+	.account-out
+		float: right
+		+clr	
+		+r(w860)
 			float: left
-			font-size: 12px
-			line-height: 19px
-			color: #fff
+	.account
+		@extend .stick
+		float: left
+		font-size: 12px
+		line-height: 19px
+		color: #fff
+		vertical-align: top
+		margin-right: 20px
+		.link
+			border-bottom: 1px dotted 
 			vertical-align: top
-			margin-right: 20px
+			margin-right: 10px
+			font-family: "helvetica-light" 
+		&:hover
 			.link
-				border-bottom: 1px dotted 
-				vertical-align: top
-				margin-right: 10px
-				font-family: "helvetica-light" 
-			&:hover
-				.link
-					border-bottom-color: transparent 
-				.ico
-					+opacity(0.7) 							
+				border-bottom-color: transparent 
 			.ico
-				vertical-align: -6px
-			&:last-child
-				margin-right: 0	
-			+r(w700)
-				display: none	
-		.header__mobile
-			li
-				float: left
-				margin-right: 15px						
+				+opacity(0.7) 							
+		.ico
+			vertical-align: -6px
+		&:last-child
+			margin-right: 0	
+		+r(w700)
+			display: none	
+	.header__mobile
+		li
+			float: left
+			margin-right: 15px						
 	.header__right
 		float: right
 		text-align: right
 		+clr
-		.item
-			float: right
-			position: relative
-			&:first-child
-				margin-left: 0
-				margin-left: 25px
+	.item
+		float: right
+		position: relative
+		text-align: right
+		&:first-child
+			margin-left: 0
+			margin-left: 25px
+		&:before
+			position: absolute
+			content: ""
+			height: 30px
+			width: 1px
+			display: inline-block
+			top: 2px
+			left: -11px
+			+background-image(linear-gradient(bottom, rgba(255,255,255,0) 0%, #fff 50.39%, rgba(255,255,255,.99) 50.9%, rgba(255,255,255,0) 100%))
+		&:last-child
 			&:before
-				position: absolute
-				content: ""
-				height: 30px
-				width: 1px
-				display: inline-block
-				top: 2px
-				left: -11px
-				+background-image(linear-gradient(bottom, rgba(255,255,255,0) 0%, #fff 50.39%, rgba(255,255,255,.99) 50.9%, rgba(255,255,255,0) 100%))
-			&:last-child
-				&:before
-					display: none		
-			+r(w700)
-				display: none
-		.phone
-			font-size: 16px
-			color: #fff
-			+he
-			font-size: 16px 
-		.quest
-			font-size: 11px
-			color: #fff
-			text-decoration: underline
-			+an
-			&:hover
-				text-decoration: none	
-		.city
-			position: relative
-			.link					 			
-				font-size: 12px
-				color: #FFF
-				border-bottom: 1px dotted
-				margin-left: 10px
-				font-family: heliosextthinc 
-				font-size: 12px
-				&:hover
-					border-bottom-color: transparent
-			.ico:after
-				position: absolute
-				bottom: -11px
-				left: 6px
-				content: ""
-				width: 0
-				height: 0
-				border-style: solid
-				border-width: 4px 4px 0 4px
-				border-color: #fff transparent transparent transparent
-				+opacity(0.35)
-			&:hover
-				.ico
-					+opacity(0.7) 	
-		.shop
-			font-size: 11px
+				display: none		
+		+r(w700)
+			display: none
+	.location
+		float: left
+		+r(w860)
+			float: right
+	.phone-out
+		margin-left: 30px
+	.phone
+		font-size: 16px
+		color: #fff
+		+he
+		font-size: 16px 
+	.quest
+		font-size: 11px
+		color: #fff
+		text-decoration: underline
+		+an
+		&:hover
+			text-decoration: none	
+	.city
+		position: relative
+		.link					 			
+			font-size: 12px
 			color: #FFF
-			text-decoration: underline
-			+an
+			border-bottom: 1px dotted
+			margin-left: 10px
+			font-family: heliosextthinc 
+			font-size: 12px
 			&:hover
-				text-decoration: none
-		.header__mobile
-			li
-				float: right
-				margin-left: 15px		
+				border-bottom-color: transparent
+		.ico:after
+			position: absolute
+			bottom: -11px
+			left: 6px
+			content: ""
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 4px 4px 0 4px
+			border-color: #fff transparent transparent transparent
+			+opacity(0.35)
+		&:hover
+			.ico
+				+opacity(0.7) 	
+	.shop
+		font-size: 11px
+		color: #FFF
+		text-decoration: underline
+		+an
+		&:hover
+			text-decoration: none
+	.header__mobile
+		li
+			float: right
+			margin-left: 15px		
 	.header__bottom
 		+r(w700)
 			display: none
@@ -191,7 +203,6 @@
 			&:before, &:after
 				top: 92px
 				background: url("../img/bg-nav-foot.png") 
-			&:after
 			+r(w860)
 				background-image: image-url('logo-foot.png')
 				height: 163px 
@@ -249,7 +260,9 @@
 			&:hover
 				color: #fff
 				&:after
-					@extend .hover-opacity 
+					+transition(opacity 0.3s)
+					&:hover
+						+opacity(0.7)
 			&:after
 				top: 28px
 				right: 20px
@@ -412,7 +425,7 @@
 			display: table-cell
 		a
 			@extend .hover-opacity				
-/*-----vacncy-----------------------------------------*/
+/*-----vacancy-----------------------------------------*/
 .vacancy
 	background-image: image-url("vacancy-bg.png")
 	position: relative
@@ -562,3 +575,336 @@
 			border-top: 3px solid $main-c
 			height: 30px
 			width: auto 
+/*-----map------------------------------------*/
+.map
+	.map__topper
+		background-image: image-url("bg-map__topper.png")
+		text-align: center
+		@include box-shadow(0 1px 1px rgba(0,0,0,.5))
+	.map__title
+		padding: 0 25px 
+	.map__content-out
+		padding-right: 0 !important
+		background-color: #333
+		position: relative
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: -100%
+			bottom: 0
+			background: #333
+		+r(w960)
+			max-width: 100%
+			padding-left: 0px
+	.map__content	
+		position: relative
+		text-align: left
+		+clr
+	.map__text, .map__city, .map__chart	
+		float: left
+		height: 100% 
+		+box
+	.map__text
+		width: 24%
+		padding: 0 30px 0 10px
+		+r(w960)
+			padding-left: 15px
+			padding-right: 15px	
+			width: 31%	
+		+r(w860)
+			width: 40%	
+		+r(w700)
+			width: 50%	
+			background-color: #464646 
+			padding: 10px 10px 10px 20px 
+		.roll 
+			padding-top: 25px
+			padding-bottom: 30px
+			border-bottom: 1px solid #D6D6D6 
+			&:last-child
+				border-bottom: none
+			&.roll_mod
+				border-bottom: none 
+			+r(w700)
+				display: none		
+		.text
+			font-size: 14px
+			line-height: 17px	
+			color: #FFF 
+			+hl
+		.text-normal
+			font-size: 18px
+			line-height: 18px
+			padding-bottom: 5px
+			font-family: heliosextc 
+		.text-big
+			font-family: heliosextthinc
+			font-size: 38px 
+			padding-top: 11px
+			color: $main-c
+		.text-color
+			color: $main-c
+		.form	 
+			width: 100%
+			background-color: #FFF
+			border: none
+			height: 30px
+			line-height: 30px
+			margin-top: 10px 
+			input
+				color: #333
+			.btn-search
+				+s(i-search-map)
+		select
+			overflow: hidden
+			max-height: 200px
+			color: #fff
+			font-size: 14px
+			line-height: 20px
+			// outline: 1px solid #464646
+			border: 1px solid #424242
+			background-color: transparent
+			width: 100%
+			height: 40px 
+			padding: 0 25px 0 8px 
+			position: relative
+			z-index: 100
+			+hl
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+		option
+			color: #000 
+	.map__city
+		width: 16%
+		background-color: #424242
+		padding: 25px 25px 0 25px
+		+r(w960)
+			width: 18%	
+		+r(w860)
+			width: 23%
+		+r(w700)
+			width: 50%
+			background-color: #464646 
+			padding: 10px 20px 10px 10px 
+		ul
+			+r(w700)
+				display: none
+		.form
+			display: none
+			+r(w700)
+				display: block
+				width: 100%
+				height: 40px
+				line-height: 20px
+				+he
+				font-size: 20px
+				background-color: #FFF
+				border: none
+				+placeholder
+					color: #737373
+				input
+					color: #333
+					vertical-align: -7px 
+				.btn-search
+					+s(i-search-map)	
+					top: 10px
+					right: 10px 							
+		a
+			color: #fff 
+			font-size: 14px
+			line-height: 18px
+			text-decoration: underline 
+			+hl
+			+transition
+			&:hover
+				color: $main-c 
+	.map__chart
+		width: 60%
+		// overflow: hidden
+		border-bottom: 6px solid #525252
+		+r(w960)
+			width: 51%
+			border-bottom: none	
+		+r(w860)
+			width: 37%
+		+r(w700)
+			width: 100%
+		img
+			height: 100%
+			+r(w700)
+				width: 100%
+		.map__form
+			height: 100%
+		.map__map
+			width: 100%
+			height: 100%
+		
+	.map__slider
+		position: absolute
+		top: 0
+		right: 0
+		width: 34%
+		height: 100%
+		background-color: rgba(0,0,0,0.7) 
+		padding: 15px 40px 0
+		z-index: 666
+		+box
+		&:after
+			content: ""
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			right: -100%
+			bottom: 0
+			background-color: rgba(0,0,0,0.7) 
+		+r(w960)
+			width: 30%	
+		+r(w860)
+			position: static
+			display: block
+			float: left
+			width: 100%
+			background-color: #464646 
+			padding-left: 20px
+			+clr
+		+r(w700)
+			padding-bottom: 20px	
+	.map__info
+		font-family: heliosextthinc
+		font-size: 14px
+		line-height: 20px
+		color: #FFF 
+		position: relative
+		padding: 20px 0 25px 
+		float: left
+		+r(w860)
+			width: 41%
+		+r(w700)
+			width: 100%	
+			padding-bottom: 0
+		&:after
+			position: absolute
+			content: ""
+			left: 0
+			bottom: 0 
+			display: inline-block
+			background-color: $main-c
+			height: 1px
+			width: 100px 
+			+r(w700)
+				display: none
+	.map__nav
+		border: 1px solid rgba(0,0,0,0.5)
+		padding: 2px
+		display: inline-block 
+		width: 104px
+		position: absolute
+		left: 40px
+		bottom: 117px 
+		z-index: 2000
+		+clr 
+		+r(w960)
+			bottom: 55px
+		+r(w860)
+			bottom: 96px
+			left: 81%
+		+r(w700)
+			bottom: 20%	
+			left: 75%					
+	.map__nav-left, .map__nav-right
+		display: block
+		float: left
+		width: 52px
+		height: 70px
+		background-color: rgba(0,0,0,0.5)
+		position: relative
+		+transition(color 0.3s)
+		&:hover
+			background-color: rgba(0,0,0,0.8)
+		&:after
+			position: absolute
+			content: ""
+			top: 14px
+			left: 14px	
+	.map__nav-left
+		&:after
+			+s(i-map-prev)
+		&:hover
+			&:after
+				+s(i-map-prev-h)			
+	.map__nav-right
+		&:after
+			+s(i-map-next)
+		&:hover
+			&:after
+				+s(i-map-next-h)	
+	.map__link
+		text-decoration: underline
+		font-family: arial
+		font-size: 12px
+		line-height: 20px
+		color: #999
+		display: block
+		position: absolute
+		left: 40px
+		bottom: 85px
+		+transition
+		+r(w960)
+			bottom: 20px
+		+r(w860)
+			bottom: 50px
+			left: 81%
+		+r(w700)
+			left: 75%
+			bottom: 8%						
+		&:hover
+			text-decoration: none
+			color: lighten(#999, 20%)	
+	.col
+		height: 540px				
+		+r(w960)
+			height: 480px
+		+r(w860)
+			height: 540px
+	.col-slider
+		+r(w860)
+			height: 200px
+		+r(w700)	
+			height: auto
+			min-height: 180px
+	.map__text
+		+r(w700)
+			height: 60px
+	.map__city
+		+r(w700)
+			height: 60px	
+	.map__chart
+		+r(w700)
+			height: 240px 
+	.mobile
+		display: none
+		+r(w700)
+			display: block
+
+.mobile-wrap
+	position: relative
+	display: none
+	padding: 1px
+	border: 1px solid #636363
+	+r(w700)
+		display: block
+	&:after
+		content: ""
+		position: absolute
+		+s(sel-arr)
+		position: absolute
+		top: 17px
+		right: 9px
+
+.js-addr
+	display: none				 					
